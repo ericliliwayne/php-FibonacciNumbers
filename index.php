@@ -12,7 +12,13 @@
 </head>
 
 <body>
+  <h1>費式數列練習</h1>
+  <form action="index.php" method="post">
+    <input type="number" name="num" id="num" value="<?=$_POST['num']??0;?>">
+    <input type="submit" value="送出">
+  </form>
     <?php
+    $n=$_POST['num']??0;
         function fib($n) {
             if ($n < 2) {
               return $n;
@@ -21,7 +27,7 @@
             return fib($n - 1) + fib($n - 2);
           }
 
-        echo fib(10);
+        echo "費式數列第{$n}項的值為 : ".fib($n);
     ?>
 </body>
     
