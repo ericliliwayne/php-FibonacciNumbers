@@ -26,7 +26,11 @@
           
             return fib($n - 1) + fib($n - 2);
           }
-
+          echo fib(0);
+          for($a=1;$a<=$n;$a++){
+            echo " , ".fib($a);
+          }
+        echo "<br>";
         echo "費式數列第{$n}項的值為 : ".fib($n);
     ?>
 </body>
